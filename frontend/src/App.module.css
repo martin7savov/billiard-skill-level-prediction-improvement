@@ -1,0 +1,353 @@
+.container {
+  background-color: #0f172a;
+  min-height: 100vh;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainContentWrapper {
+  width: 100%;
+  max-width: 64rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: #818cf8;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+.formSection {
+  background-color: #1e293b;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(129, 140, 248, 0.1);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .formGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.input {
+  background-color: #334155;
+  border-width: 1px;
+  border-color: #475569;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.gridItemsCenter {
+  align-items: center;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.checkbox {
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 0.25rem;
+  background-color: #334155;
+  border-color: #475569;
+  color: #6366f1;
+}
+
+.checkboxLabel {
+  color: #94a3b8;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rangeInput {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #334155;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+}
+
+.exerciseGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .exerciseGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.exerciseGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.exerciseLabel {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.exerciseInput {
+  background-color: #334155;
+  border-width: 1px;
+  border-color: #475569;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.buttonWrapper {
+  text-align: center;
+}
+
+.submitButton {
+  background-color: #4f46e5;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1), 0 6px 8px -3px rgba(0, 0, 0, 0.05);
+}
+
+.loadingContainer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.spinner {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #818cf8;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  margin-top: 1rem;
+  color: #94a3b8;
+}
+
+.errorBox {
+  margin-top: 2rem;
+  background-color: rgba(153, 27, 27, 0.5);
+  border-width: 1px;
+  border-color: #b91c1c;
+  color: #fca5a5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.resultsSection {
+  margin-top: 2.5rem;
+  background-color: rgba(30, 41, 59, 0.5);
+  border-width: 1px;
+  border-color: #334155;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resultsTitle {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #818cf8;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .resultsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resultCardColSpan2 {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.resultCard {
+  background-color: #1e293b;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #6366f1;
+}
+
+.resultValue {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: #4ade80;
+}
+
+.resultUnit {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.focusText {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: #a5b4fc;
+}
+
+.exerciseList {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fargoInputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.predictFargoButton {
+  padding: 10px 16px;
+  margin-top: 7%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.predictFargoButton:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.predictFargoButton:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.predictFargoButton:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,150 @@
+.trainingSection {
+    margin-top: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.trainingTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.categorySection {
+    background: #2d3748;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.categoryTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #cbd5e0;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #4a5568;
+    padding-bottom: 10px;
+}
+
+.levelSection {
+    margin-bottom: 25px;
+}
+
+.levelSection:last-child {
+    margin-bottom: 0;
+}
+
+.levelTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #a0aec0;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 4px solid #63b3ed;
+}
+
+.exerciseGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.exerciseCard {
+    background: #4a5568;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exerciseCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.exerciseImageWrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #4a5568;
+}
+
+.exerciseImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.exerciseCard:hover .exerciseImage {
+    transform: scale(1.05);
+}
+
+.exerciseInfo {
+    padding: 18px;
+}
+
+.exerciseCardTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin: 0 0 6px 0;
+}
+
+.exerciseDescription {
+    font-size: 0.85rem;
+    color: #a0aec0;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Responsive adjustments for training section */
+@media (max-width: 768px) {
+    .trainingSection {
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .trainingTitle {
+        font-size: 1.7rem;
+    }
+
+    .categorySection {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .exerciseGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .categoryTitle {
+        font-size: 1.3rem;
+    }
+
+    .levelTitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trainingTitle {
+        font-size: 1.5rem;
+    }
+
+    
+    .exerciseInfo {
+        padding: 15px;
+    }
+
+    .categorySection {
+        padding: 15px;
+    }
+}
