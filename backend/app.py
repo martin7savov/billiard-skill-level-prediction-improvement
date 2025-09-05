@@ -126,10 +126,4 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 
 
-# -----------------------
-# Vercel-specific handler
-# -----------------------
-import vercel_wsgi
 
-def handler(event, context):
-    return vercel_wsgi.handle(app, event, context)
