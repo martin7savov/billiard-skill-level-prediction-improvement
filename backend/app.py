@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from numpy import numpy as np
+import numpy as np
 from flask_cors import CORS
 from skill_predictor_function import calculate_and_project_skill
 from fargo_lr_predictor import predict_fargo_rate_lr
