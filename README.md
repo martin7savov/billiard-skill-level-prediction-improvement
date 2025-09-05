@@ -42,7 +42,7 @@ Frontend (Vercel):
 
 Project root contains Vite app.
 
-Calls backend via full URL to Render (e.g., https://your-backend-render-url).
+Calls backend via full URL to Render
 
 Backend (Render):
 
