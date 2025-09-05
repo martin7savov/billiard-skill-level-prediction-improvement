@@ -1,24 +1,10 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/app" }
+  "version": 2,
+  "builds": [
+    { "src": "app.py", "use": "@vercel/python" }
   ],
-  "headers": [
-    {
-      "source": "/(.)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": ""
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization"
-        }
-      ]
-    }
+  "routes": [
+    { "src": "/calculate_skill", "dest": "app.py" },
+    { "src": "/predict_fargo_lr", "dest": "app.py" }
   ]
 }
