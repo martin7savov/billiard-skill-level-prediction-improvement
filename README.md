@@ -101,7 +101,7 @@ npm run dev
 Backend - Flask
 ```sh
 cd backend
-py -m pip install Flask
+py -m pip install Flask scikit-learn joblib pandas numpy flask-cors
 py -m flask run # backup python app.py
 ```
 -> you should see  "* Running on http://127.0.0.1:5000" in the terminal and should be able to send requests
