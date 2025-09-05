@@ -176,7 +176,7 @@ export default function App() {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/predict_fargo_lr', {
+            const response = await fetch('https://billiard-skill-level-prediction-imp-pink.vercel.app/predict_fargo_lr', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -230,7 +230,7 @@ export default function App() {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/calculate_skill', {
+            const response = await fetch('https://billiard-skill-level-prediction-imp-pink.vercel.app/calculate_skill', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
