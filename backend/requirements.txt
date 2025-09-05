@@ -1,2 +1,4 @@
-Flask>=2.2
-gunicorn>=20.1
+flask
+flask-cors
+numpy
+gunicorn
