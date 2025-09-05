@@ -15,6 +15,15 @@ def calculate_skill():
     The data is expected as a JSON object in the request body.
     This endpoint consumes the model logic as an external module.
     """
+   
+    if request.method == 'OPTIONS':
+        # Preflight request
+        response = make_response()
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        response.headers.add("Access-Control-Allow-Methods", "POST, OPTIONS")
+        response.headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization")
+        return response
+
     data = request.get_json(silent=True)
 
     if not data:
@@ -66,6 +75,16 @@ def predict_fargo_lr_endpoint():
     API endpoint to predict Fargo Rate using the linear regression model.
     Expects all 14 features as a JSON object in the request body.
     """
+
+    if request.method == 'OPTIONS':
+        response = make_response()
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        response.headers.add("Access-Control-Allow-Methods", "POST, OPTIONS")
+        response.headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization")
+        return response
+
+
+    
     data = request.get_json(silent=True)
 
     if not data:
