@@ -1,5 +1,5 @@
 ML Billiards Exercise Predictions
-
+#old - use this if running locally in browser
 Frontend - React/Vite
 ```sh
 cd frontend
