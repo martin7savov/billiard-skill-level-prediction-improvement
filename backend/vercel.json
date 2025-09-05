@@ -4,7 +4,23 @@
     { "src": "app.py", "use": "@vercel/python" }
   ],
   "routes": [
-    { "src": "/calculate_skill", "dest": "app.py" },
-    { "src": "/predict_fargo_lr", "dest": "app.py" }
+    {
+      "src": "/calculate_skill",
+      "dest": "app.py",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      }
+    },
+    {
+      "src": "/predict_fargo_lr",
+      "dest": "app.py",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      }
+    }
   ]
 }
