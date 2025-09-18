@@ -1,58 +1,59 @@
-Billiard Skill Level Prediction App - * GO TO https://billiard-skill-level-prediction-imp-sigma.vercel.app* 
+# 🎱 Billiard Skill Level Prediction App  
 
-Overview
+👉 **[Try the app here](https://billiard-skill-level-prediction-imp-sigma.vercel.app)**  
 
-This application predicts a billiards player's skill level and Fargo rate based on training data, match statistics, and drill performance.
+---
 
-Frontend: Deployed on Vercel, built with Vite.
+## 📌 Overview  
+This application predicts a billiards player's **skill level** and **FargoRate** based on:  
+- Training data  
+- Match statistics  
+- Drill performance  
 
-Backend: Deployed on Render, built with Flask.
+- **Frontend:** Vercel (Vite + React)  
+- **Backend:** Render (Flask + Python)  
 
-The frontend communicates with the backend via REST API endpoints to perform skill calculations and Fargo rate predictions.
+The frontend communicates with the backend via **REST API endpoints** to perform skill calculations and FargoRate predictions.  
 
-Backend (Render)
+---
 
-Framework: Flask
+## 🖥️ Backend (Render)  
 
-Language: Python 3.13+
+- **Framework:** Flask  
+- **Language:** Python 3.13+  
+- **Dependencies:** Listed in `requirements.txt`  
+  - `flask`, `flask-cors`, `numpy`, `pandas`, `gunicorn`  
 
-Dependencies: Listed in requirements.txt
+### API Endpoints  
 
-flask, flask-cors, numpy, pandas, gunicorn
+| Endpoint            | Method | Description                                                         |
+|---------------------|--------|---------------------------------------------------------------------|
+| `/calculate_skill`  | POST   | Computes projected skill levels from player data and drill scores.  |
+| `/predict_fargo_lr` | POST   | Predicts FargoRate using a pre-trained linear regression model.     |
 
-API Endpoints:
+🔗 **CORS** is enabled to allow cross-origin requests from the frontend.  
 
-Endpoint	Method	Description
-/calculate_skill	POST	Computes projected skill levels from player data and drill scores.
-/predict_fargo_lr	POST	Predicts Fargo Rate using a pre-trained linear regression model.
+---
 
-CORS is enabled for cross-origin requests from the frontend.
+## 🌐 Frontend (Vercel)  
 
+- **Framework:** Vite (React)  
+- **Purpose:** Collects player input data and displays predicted skill and FargoRate.  
+- **API Integration:** Communicates with backend endpoints (deployed on Render) via HTTP `POST` requests.  
 
-Frontend (Vercel)
+---
 
-Framework: Vite (React)
+## 🚀 Deployment Notes  
 
-Purpose: Collects player input data and displays predicted skill and Fargo rate.
+### Frontend (Vercel)  
+- Project root contains the Vite app.  
+- Calls backend via the full Render API URL.  
 
-API Integration: Calls backend endpoints deployed on Render via HTTP POST requests.
-
-Deployment Notes
-
-Frontend (Vercel):
-
-Project root contains Vite app.
-
-Calls backend via full URL to Render
-
-Backend (Render):
-
-Ensure requirements.txt is up to date.
-
-Use gunicorn app:app as start command in Render.
-
-All necessary packages (numpy, pandas, flask-cors) must be installed.
-
+### Backend (Render)  
+- Ensure `requirements.txt` is up to date.  
+- Start command:  
+  ```bash
+  gunicorn app:app
 
 
 
